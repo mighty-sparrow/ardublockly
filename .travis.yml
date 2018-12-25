@@ -19,7 +19,7 @@ before_install:
   # Original problem is old version of "six" package lingering around
   # https://github.com/testing-cabal/mock/issues/337
   - export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
-  - python -c "import sys; print(sys.path) from six import wraps"
+  - python -c "import sys from six import wraps; print(sys.path)"
 
   # Install Python 3.5 with pip, and check versions
   - brew update
